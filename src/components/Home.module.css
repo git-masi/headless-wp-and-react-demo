@@ -1,0 +1,40 @@
+.header {
+  height: calc(100vh - 6rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
+  background: linear-gradient(to bottom right, #2e86de, #576574);
+}
+
+.header h1 {
+  margin-top: -6rem;
+  padding: 10% 5rem 10% 5rem;
+  font-size: 8rem;
+  color: whitesmoke;
+}
+
+.cardArea {
+  min-height: 100vh;
+}
+
+.about {
+  padding: 10% 20% 0 20%;
+  height: calc(100vh - 6rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  clip-path: polygon(0 20%, 100% 0%, 100% 1000%, 0% 100%);
+  background: linear-gradient(to bottom right, #2e86de, #576574);
+}
+
+.about :not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.about p {
+  color: whitesmoke;
+  font-size: 2rem;
+}
