@@ -1,0 +1,21 @@
+.card {
+  padding: 1rem;
+  width: 100%;
+  background: rgba(200, 214, 229, 1.0);
+  border: 1px solid rgba(34, 47, 62, 1.0);
+  border-radius: .5rem;
+  box-shadow: 0 .5rem .8rem rgba(87, 101, 116, .7);
+}
+
+.card img {
+  width: 100%;
+}
+
+.cardText h3 {
+  font-size: 3rem;
+}
+
+.cardText h4 {
+  text-transform: uppercase;
+  color: rgba(87, 101, 116, .9);
+}

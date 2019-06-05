@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import CitiesCard from './CitiesCard';
 import axios from 'axios';
 import styles from './Cities.module.css';
 
@@ -10,23 +11,34 @@ class Cities extends Component {
     author: '',
   }
 
-  componentDidMount() {
-    const { featured_media, author } = this.props.city;
-    const getImageURL = axios.get(`/wp-json/wp/v2/media/${featured_media}`);
-    const getAuthor = axios.get(`/wp-json/wp/v2/users/${author}`);
+  state = {
+    cities: [],
+    isLoaded: false,
+  }
 
-    Promise.all([getImageURL, getAuthor]).then(res => this.setState({
-      imgURL: res[0].data.media_details.sizes.full.source_url,
-      author: res[1].data.name,
-    }));
+  componentDidMount() {
+    axios.get('/wp-json/wp/v2/cities')
+      .then(res => this.setState({
+        cities: res.data,
+        isLoaded: true,
+      }))
+      .catch(err => console.log(err));
   }
 
   render() {
+    const { cities, isLoaded } = this.state;
+
+    const cards = !isLoaded ?
+      null :
+      <section className={styles.cardArea}>
+        {cities.map(c => <CitiesCard key={c.id} city={c}/>)}
+      </section>
+
     return (
       <Fragment>
         <Navbar />
         <main className={styles.main}>
-
+          {cards}
         </main>
         <Footer />
       </Fragment>
