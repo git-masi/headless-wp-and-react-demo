@@ -8,8 +8,8 @@ const Navbar = props => {
   return (
     <nav className={styles.nav}>
       <Link className={pathname === '/' ? styles.current : styles.navLink} to="/">Home</Link>
-      <Link className={styles.navLink} to="/cities">Cities</Link>
-      <Link className={styles.navLink} to="/bikes">Bikes</Link>
+      <Link className={pathname === '/cities' ? styles.current : styles.navLink} to="/cities">Cities</Link>
+      <Link className={pathname === '/bikes' ? styles.current : styles.navLink} to="/bikes">Bikes</Link>
     </nav>
   )
 }
