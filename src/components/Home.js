@@ -1,9 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import Navbar from './Navbar';
   
 class Home extends Component {
   render() {
     return (
-      <h1>still just the home page</h1>
+      <Fragment>
+        <Navbar />
+      </Fragment>
     )
   }
 }

@@ -1,0 +1,32 @@
+.nav {
+  padding-left: 1rem;
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  background: #222f3e;
+}
+
+.nav :not(:last-child) {
+  margin-right: 1rem;
+} 
+
+.current,
+.navLink {
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  text-decoration: none;
+}
+
+.current {
+  background: #c8d6e5;
+}
+
+.navLink {
+  background: #54a0ff;
+}
+
+.current:visited,
+.navLink:visited {
+  color: inherit;
+}
