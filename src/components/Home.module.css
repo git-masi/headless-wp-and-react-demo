@@ -17,6 +17,11 @@
 
 .cardArea {
   min-height: 100vh;
+  padding: 5%;
+}
+
+.cardArea > :not(:last-child) {
+  margin-bottom: 2rem;
 }
 
 .about {
@@ -30,7 +35,7 @@
   background: linear-gradient(to bottom right, #2e86de, #576574);
 }
 
-.about :not(:last-child) {
+.about > :not(:last-child) {
   margin-bottom: 2rem;
 }
 

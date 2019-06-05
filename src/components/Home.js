@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import HomeCard from './HomeCard';
 import styles from './Home.module.css';
   
 class Home extends Component {
@@ -13,7 +14,7 @@ class Home extends Component {
         </header>
         <main>
           <section className={styles.cardArea}>
-
+            <HomeCard />
           </section>
           <section className={styles.about}>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
