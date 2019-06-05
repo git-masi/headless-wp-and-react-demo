@@ -20,3 +20,8 @@
   height: 100%;
   flex: 1;
 }
+
+.author {
+  font-weight: normal;
+  color: rgba(87, 101, 116, 1.0);
+}
