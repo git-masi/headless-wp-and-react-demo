@@ -1,3 +1,12 @@
+This project was part of a talk at the Charm City JS meetup on June 5th 2019 discussing WordPress as a headless CMS for React (and also just in general). Local by Flywheel was used as a WP dev server so this code only contains the React portion. Please see the slides on the Charm City JS Slack channel for more information.
+
+Versions of software used at the time:
+PHP v7.2.9
+WP v5.2.1
+MySQL v5.7.23
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
